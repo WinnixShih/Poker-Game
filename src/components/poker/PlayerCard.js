@@ -12,11 +12,10 @@ function PlayerCard({ reset }) {
         setHand2(Math.floor(Math.random() * 13) + 1);
     }
 
+    // * set new game when reset state change
     useEffect(() => {
-        if (reset) {
-            setHand1(null);
-            setHand2(null);
-        }
+        setHand1(null);
+        setHand2(null);
     }, [reset]);
 
     return (
